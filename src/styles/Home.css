@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+.Headers {
+    background-image: linear-gradient(rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0.3) 100%), url("../ressources/EPFL-vue-aerienne-1536x864.jpg");
+    /*filter: blur(8px);*/
+    /*-webkit-filter: blur(8px);*/
+    text-align: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo {
+    width: min(50vw, 50vh);
+    margin-bottom: -5vh;
+}
+
+.Title {
+    min-height: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-txt {
+    max-width: 60%;
+    color: white;
+    font-family: "Alex Brush", cursive;
+    font-size: max(9vw, 9vh);
+    font-weight: 200;
+    text-align: center;
+    line-height: min(13vh, 13vw);
+
+    margin-top: 0;
+}
+
+.rotate {
+
+    transform: rotate(-12deg);
+
+
+    /* Legacy vendor prefixes that you probably don't need... */
+
+    /* Safari */
+    -webkit-transform: rotate(-12deg);
+
+    /* Firefox */
+    -moz-transform: rotate(-12deg);
+
+    /* IE */
+    -ms-transform: rotate(-12deg);
+
+    /* Opera */
+    -o-transform: rotate(-12deg);
+
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}
+
+.Video {
+    min-height: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav {
+    width: 5vw;
+    margin-top: 4vh;
+}
+
+.Menu {
+    background-color: white;
+}
+
+.Group {
+    min-height: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
