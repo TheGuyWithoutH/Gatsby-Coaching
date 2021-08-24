@@ -1,0 +1,26 @@
+{
+  "name": "coaching-2022",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Coaching 2022",
+  "author": "Ugo Balducci",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^3.11.1",
+    "gatsby-plugin-image": "^1.12.0",
+    "gatsby-plugin-sharp": "^3.12.0",
+    "gatsby-source-filesystem": "^3.12.0",
+    "gatsby-transformer-sharp": "^3.12.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
