@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+
+.card-container {
+    background-image: linear-gradient(rgba(221,221,221,0.7) 0%, rgba(221,221,221,0.7) 100%), url('../ressources/LOGO COACHING IC FOND BLANC.png');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(60px);
+    width: 420px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-img {
+    border-radius: 50000px;
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.infos {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    font-family: "Sen", SansSerif, serif;
+    font-weight: normal;
+    font-size: xxx-large;
+    margin: 0;
+}
+
+.age {
+    font-family: "Sen", SansSerif, serif;
+    font-weight: bolder;
+    font-size: 100px;
+    margin: 0;
+}
+
+.description {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.origin, .description-content {
+    font-family: "Sen", SansSerif, serif;
+    font-size: initial;
+}
+
+.origin {
+    font-size: x-large;
+}
+
+.hobbys {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

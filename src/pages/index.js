@@ -5,7 +5,8 @@ import Home from "../Components/Home/Home";
 function App() {
   return (
       <div className="App">
-        <Home/>
+          <title>Coaching EPFL 2022</title>
+          <Home/>
       </div>
   );
 }

@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+
+html {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
 
 .Headers {
     background-image: linear-gradient(rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0.3) 100%), url("../ressources/EPFL-vue-aerienne-1536x864.jpg");
-    /*filter: blur(8px);*/
-    /*-webkit-filter: blur(8px);*/
     text-align: center;
     background-size: cover;
 
@@ -26,6 +36,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-snap-align: start;
 }
 
 .welcome-txt {
@@ -71,11 +82,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-snap-align: start;
+}
+
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translatey(0px);
+    }
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+        transform: translatey(-20px);
+    }
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translatey(0px);
+    }
 }
 
 .nav {
     width: 5vw;
     margin-top: 4vh;
+    animation: float 3s ease-in-out infinite;
 }
 
 .Menu {
@@ -89,18 +118,84 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    scroll-snap-align: start;
 }
 
+
+
 .txt {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 35vw;
+    font-family: "Quicksand", sans-serif;
+    font-size: 2vw;
+    font-weight: lighter;
+    text-align: justify;
 }
 
 .button {
-    flex: 1;
+    height: 80vh;
+    width: 40vw;
+    background: white;
+    border-radius: 100px;
+    -webkit-box-shadow: 12px 9px 10px -6px rgba(0,0,0,0.51);
+    box-shadow: 12px 9px 10px -6px rgba(0,0,0,0.51);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.button:hover {
+    height: 81vh;
+    width: 41vw;
+}
+
+.groupIco {
+    width: 80%;
+    margin: 0;
+}
+
+.groupTxt {
+    flex: 1;
+    font-family: "Comfortaa", serif;
+    font-size: 450%;
+    text-align: center;
+    color: #49CCCC;
+    margin: 0;
+}
+
+.Timeline {
+    min-height: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+}
+
+
+/* Création visuelle en mode portrait */
+@media screen and (orientation:portrait) {
+    .Group {
+        flex-direction: column;
+    }
+
+    .txt {
+        width: 80vw;
+        font-size: 2vh;
+    }
+
+    .button {
+        height: 50vh;
+        width: 70vw;
+    }
+
+    .button:hover {
+        height: 51vh;
+        width: 71vw;
+    }
+
+    .groupTxt {
+        font-size: 250%;
+    }
 }

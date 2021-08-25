@@ -1,0 +1,85 @@
+.container {
+    max-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-carousel {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    height: 650px;
+    width: 40vw;
+    margin: 0 40px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card {
+    background: #DDDDDD;
+    border-radius: 53px;
+    border: none;
+    padding: 30px;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+    width: 420px;
+    height: 70vh;
+    transition: all 0.75s ease;
+    opacity: 0;
+    position: absolute;
+    transform: scale(0.85) translateX(100px);
+}
+
+.card h2,
+.card p {
+    line-height: 1.5;
+    margin: 0;
+}
+
+.card.active {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    box-shadow: 0 30px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.card.next {
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.card.prev {
+    transform: scale(0.85) translateX(-100px);
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.nextButton {
+    z-index: 4;
+    display : inline-block;
+    height : 0;
+    width : 0;
+    color: transparent;
+    background: none;
+    border-top : 37px solid transparent;
+    border-bottom : 38px solid transparent;
+    border-left : 66px solid #E03C9E;
+    border-right: transparent;
+}
+
+.prevButton {
+    z-index: 4;
+    display : inline-block;
+    height : 0;
+    width : 0;
+    background: none;
+    color: transparent;
+    border-top : 38px solid transparent;
+    border-right : 66px solid #E03C9E;
+    border-bottom : 37px solid transparent;
+    border-left: transparent;
+}
