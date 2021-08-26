@@ -15,7 +15,7 @@ class Home extends PureComponent {
                 <div className="Headers">
                     <div className="Title">
                         <img src={logo} className="logo"/>
-                        <h1 className="welcome-txt rotate">Bienvenue au Coaching</h1>
+                        <h1 className="welcome-txt rotate">Bienvenue au<br/>Coaching</h1>
                         <a href="#video">
                             <img src={scrollImg} className="nav"/>
                         </a>
@@ -40,7 +40,7 @@ class Home extends PureComponent {
                     <div style={{flex: 1, display: 'flex', justifyContent: 'center'}}>
                         <Link to='/group' style={{textDecoration: 'none'}}>
                             <div className="button">
-                                <div style={{flex: 2, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                                <div style={{flex: 3, display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 0}}>
                                     <img src={group} className="groupIco"/>
                                 </div>
                                 <p className="groupTxt">Découvre<br/>Ton Groupe</p>
