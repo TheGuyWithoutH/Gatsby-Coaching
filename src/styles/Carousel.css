@@ -87,6 +87,11 @@
 
 @media screen and (orientation: portrait) {
 
+    .container {
+        margin-top: 6vh;
+        align-items: start;
+    }
+
     .card-carousel {
         align-items: start;
         width: 80vw;
@@ -99,11 +104,11 @@
     }
 
     .nextButton {
-        transform: translateY(30vh) translateX(-20vw);
+        transform: translateY(60vh) translateX(-20vw);
     }
 
     .prevButton {
-        transform: translateY(30vh) translateX(20vw);
+        transform: translateY(60vh) translateX(20vw);
     }
 
 }
