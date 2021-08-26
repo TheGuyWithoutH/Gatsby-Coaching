@@ -23,9 +23,9 @@
 
 @media screen and (orientation: portrait) {
 
-    html, body {margin: 0; height: 100%; overflow: hidden}
-
     .CardDisplay {
+        margin: 0;
+        overflow-x: hidden;
         background-image: url("../ressources/Group 2.svg");
         background-size: cover;
         background-repeat: no-repeat;
