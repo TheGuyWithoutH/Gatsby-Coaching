@@ -5,8 +5,8 @@
     background-size: cover;
     background-position: center;
     backdrop-filter: blur(60px);
-    width: 420px;
-    height: 70vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,7 +15,7 @@
 
 .profile-img {
     border-radius: 50000px;
-    width: 200px;
+    width: 40%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
@@ -65,4 +65,24 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+@media screen and (orientation: portrait) {
+
+    .name {
+        font-size: x-large;
+    }
+
+    .age {
+        font-size: 15vw;
+    }
+
+    .origin {
+        font-size: large;
+    }
+
+    .description {
+        font-size: medium;
+    }
+
 }

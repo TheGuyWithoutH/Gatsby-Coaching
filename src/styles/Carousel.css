@@ -1,4 +1,5 @@
 .container {
+    flex: 7;
     max-height: 100vh;
     min-width: 100vw;
     display: flex;
@@ -82,4 +83,27 @@
     border-right : 66px solid #E03C9E;
     border-bottom : 37px solid transparent;
     border-left: transparent;
+}
+
+@media screen and (orientation: portrait) {
+
+    .card-carousel {
+        align-items: start;
+        width: 80vw;
+        height: 120vw;
+    }
+
+    .card {
+        width: 80vw;
+        height: 100vw;
+    }
+
+    .nextButton {
+        transform: translateY(30vh) translateX(-20vw);
+    }
+
+    .prevButton {
+        transform: translateY(30vh) translateX(20vw);
+    }
+
 }
