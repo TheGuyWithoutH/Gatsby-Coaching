@@ -1,0 +1,127 @@
+.content {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+.background-element {
+    position: fixed;
+    background-image: linear-gradient(rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.3) 100%), url("../ressources/Card-Background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+}
+
+.intro-txt {
+    width: 80vw;
+}
+
+.title {
+    color: black;
+    font-weight: bolder;
+    font-family: "Lato Black", serif;
+    font-size: 9vw;
+}
+
+.explanation {
+    background: linear-gradient(rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 100%);
+    border-radius: 20px;
+    padding: 2vh 2vw;
+    font-family: "Lato", serif;
+    font-weight: lighter;
+    font-size: x-large;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin: 0;
+    font-family: "Sen", sans-serif;
+    font-size: xxx-large;
+    font-weight: bolder;
+}
+
+input {
+    margin: 2vh auto;
+    height: 6vh;
+    width: 30vw;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+textarea {
+    margin: 2vw auto;
+    height: 20vh;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.id-form {
+    display: flex;
+    width: 80vw;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.profile-picture {
+    border-radius: 50000px;
+    width: 20vw;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.extra-infos {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.age {
+    display: flex;
+    flex-direction: column;
+}
+
+.bio-container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+
+.button-submit {
+    border-radius: 10px;
+    padding: 10px 10px;
+    font-family: "Lato Black", serif;
+    font-size: x-large;
+}
+
+
+@media screen and (orientation: portrait) {
+
+    .background-element {
+        margin: 0;
+        background-image: linear-gradient(rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.3) 100%), url("../ressources/Group 2.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+}

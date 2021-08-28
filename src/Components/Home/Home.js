@@ -50,7 +50,7 @@ class Home extends PureComponent {
                 </div>
 
                 <div className="Timeline">
-
+                    <h1 style={{fontFamily: "Quicksand", fontSize: '17vmin'}}>Work in progress...</h1>
                 </div>
 
             </div>
