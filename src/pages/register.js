@@ -69,11 +69,29 @@ class Register extends Component {
                     </div>
                     <div className="hobbys-container">
                         <h2>Hobbys</h2>
-                        <select name="cars" id="cars" multiple>
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option>
+                        <select name="hobbies" id="hobbies" multiple>
+                            <option value="anime">Animes</option>
+                            <option value="assos">Associations</option>
+                            <option value="basket">Basketball</option>
+                            <option value="bourse">Bourse</option>
+                            <option value="chant">Chant</option>
+                            <option value="code">Programmation, hacking...</option>
+                            <option value="cuisine">Cuisine</option>
+                            <option value="danse">Danse</option>
+                            <option value="ecriture">Ecriture</option>
+                            <option value="foot">Football</option>
+                            <option value="jeux">Jeux de Rôle</option>
+                            <option value="jeux">Jeux Vidéos</option>
+                            <option value="livre">Livres</option>
+                            <option value="maths">Maths</option>
+                            <option value="mode">Mode</option>
+                            <option value="musique">Musique</option>
+                            <option value="plage">Plage</option>
+                            <option value="raquette">Tennis (ou autre sport de raquette)</option>
+                            <option value="ski">Ski</option>
+                            <option value="theatre">Théâtre</option>
+                            <option value="tv">Films et séries</option>
+                            <option value="volley">Volleyball</option>
                         </select>
                     </div>
                     <div className="alcohol-container">
