@@ -29,7 +29,7 @@ class Register extends Component {
             <div className="content">
                 <div className="background-element"/>
                 <div className="intro-txt">
-                    <div style={{width: '100%', display:'flex', flexDirection:'row', alignItems: 'center', justifyContent: 'space-evenly'}}>
+                    <div className="title-container">
                         <h1 className="title">Salut toi 🙃</h1>
                         <img src={logo} className="logo"/>
                     </div>
@@ -69,10 +69,58 @@ class Register extends Component {
                     </div>
                     <div className="hobbys-container">
                         <h2>Hobbys</h2>
-
+                        <select name="cars" id="cars" multiple>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
                     </div>
                     <div className="alcohol-container">
-                        <h2>Alcool</h2>
+                        <h2>Alcool préféré</h2>
+                        <div className="alcohol-form">
+                            <input type="radio" id="nothing" name="alcohol" value="nothing"/>
+                            <label htmlFor="nothing">
+                                <span title="Pas d'alcool">
+                                    <img src="https://image.flaticon.com/icons/png/512/4330/4330187.png" className="alcohol-icon"/>
+                                </span>
+                            </label>
+
+                            <input type="radio" id="cocktail" name="alcohol" value="cocktail"/>
+                            <label htmlFor="cocktail">
+                                <span title="Cocktail">
+                                    <img src="https://image.flaticon.com/icons/png/512/920/920539.png" className="alcohol-icon"/>
+                                </span>
+                            </label>
+
+                            <input type="radio" id="wine" name="alcohol" value="wine"/>
+                            <label htmlFor="wine">
+                                <span title="Vin">
+                                    <img src="https://image.flaticon.com/icons/png/512/4425/4425723.png" className="alcohol-icon"/>
+                                </span>
+                            </label>
+
+                            <input type="radio" id="beer" name="alcohol" value="beer"/>
+                            <label htmlFor="beer">
+                                <span title="Bière">
+                                    <img src="https://image.flaticon.com/icons/png/512/2884/2884841.png" className="alcohol-icon"/>
+                                </span>
+                            </label>
+
+                            <input type="radio" id="shots" name="alcohol" value="shots"/>
+                            <label htmlFor="shots">
+                                <span title="Shots de Vodka...">
+                                    <img src="https://image.flaticon.com/icons/png/512/1930/1930710.png" className="alcohol-icon"/>
+                                </span>
+                            </label>
+
+                            <input type="radio" id="glass" name="alcohol" value="glass"/>
+                            <label htmlFor="glass">
+                                <span title="Whiskey, spiritueux ...">
+                                    <img src="https://image.flaticon.com/icons/png/512/920/920521.png" className="alcohol-icon"/>
+                                </span>
+                            </label>
+                        </div>
 
                     </div>
                     <div className="message-container">

@@ -23,6 +23,14 @@
     width: 80vw;
 }
 
+.title-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .title {
     color: black;
     font-weight: bolder;
@@ -120,6 +128,34 @@ textarea {
     display: flex;
     flex-direction: column;
     width: 80vw;
+    margin: 5vh auto;
+}
+
+.alcohol-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 5vh auto;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label {
+    padding: 4px;
+}
+
+.alcohol-icon {
+    width: 10vmin;
+    margin: auto 2vw;
+}
+
+input[type="radio"]:checked+label {
+    border: solid 2px #49CCCC;
+    border-radius: 20px;
+    background: linear-gradient(rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.4) 100%);
 }
 
 .message-container {
@@ -146,16 +182,31 @@ textarea {
         background-repeat: no-repeat;
     }
 
+    .intro-txt {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title-container {
+        flex-direction: column-reverse;
+    }
+
     .logo {
-        width: 50vw;
+        width: 70vw;
     }
 
     h2 {
         font-size: x-large;
     }
 
+    .explanation {
+        font-size: large;
+    }
+
     .profile-picture {
-        width: 50vw;
+        width: 40vw;
     }
 
 }
