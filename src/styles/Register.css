@@ -133,6 +133,7 @@ textarea {
     padding: 10px 10px;
     font-family: "Lato Black", serif;
     font-size: x-large;
+    margin-top: 5vh;
 }
 
 
@@ -151,6 +152,10 @@ textarea {
 
     h2 {
         font-size: x-large;
+    }
+
+    .profile-picture {
+        width: 50vw;
     }
 
 }
