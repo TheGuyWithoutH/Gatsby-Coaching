@@ -127,6 +127,7 @@ textarea {
 .alcohol-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 80vw;
     margin: 5vh auto;
 }
@@ -207,6 +208,10 @@ input[type="radio"]:checked+label {
 
     .profile-picture {
         width: 40vw;
+    }
+
+    .alcohol-form {
+        transform: translateX(-27px);
     }
 
 }
