@@ -90,6 +90,14 @@ textarea {
     justify-content: space-between;
 }
 
+.avatar {
+    display: none;
+}
+
+.profile-picture:hover {
+    cursor: pointer;
+}
+
 .age {
     display: flex;
     flex-direction: column;

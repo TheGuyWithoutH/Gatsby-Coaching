@@ -1,9 +1,29 @@
 import React, {Component} from 'react';
 import '../styles/Register.css'
 import logo from "../ressources/LOGO COACHING IC FOND BLANC.png";
-import {Link} from "gatsby";
 
 class Register extends Component {
+
+
+
+    componentDidMount() {
+        const input = document.querySelectorAll('.avatar');
+
+        const picture = input.item(0).nextElementSibling.children.item(0);
+
+        input.item(0).addEventListener( 'change', function( e ) {
+            if (this.files && this.files[0]) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    picture.src = reader.result;
+                }
+
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    }
+
     render() {
         return (
             <div className="content">
@@ -28,8 +48,10 @@ class Register extends Component {
                         </div>
                         <input type="file"
                                id="avatar" name="avatar"
-                               accept="image/png, image/jpeg"/>
-                        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" className="profile-picture"/>
+                               accept="image/" className="avatar"/>
+                        <label htmlFor="avatar">
+                            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" className="profile-picture"/>
+                        </label>
                     </div>
                     <div className="extra-infos">
                         <div className="age">
