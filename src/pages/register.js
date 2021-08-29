@@ -55,7 +55,7 @@ class Register extends Component {
                     </div>
                     <div className="extra-infos">
                         <div className="age">
-                            <h2>Âge *</h2>
+                            <h2>Age *</h2>
                             <input type="text" className="age-input" placeholder="Âge"/>
                         </div>
                         <div className="country">
