@@ -1,10 +1,29 @@
 import React, {Component} from 'react';
 import '../styles/Register.css'
 import logo from "../ressources/LOGO COACHING IC FOND BLANC.png";
+import firestore from "../utils/firebase-config";
+
+
+const _alreadyAuth = (uid) => {
+    const docRef = firestore.collection("temporary-uids").doc(uid);
+
+    docRef.get().then((doc) => {
+        if (doc.exists) {
+            console.log(doc.data().registered)
+            if(doc.data().registered) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return true;
+        }
+    }).catch((error) => {
+        return true;
+    });
+}
 
 class Register extends Component {
-
-
 
     componentDidMount() {
         const input = document.querySelectorAll('.avatar');
@@ -25,6 +44,15 @@ class Register extends Component {
     }
 
     render() {
+        /*const params = new URLSearchParams(document.location.search.substring(1));
+        const uid = params.get("id").toString();
+
+        if(uid === null) {
+            window.location.replace("/");
+        } else if (_alreadyAuth(uid)) {
+            window.location.replace("/");
+        }*/
+
         return (
             <div className="content">
                 <div className="background-element"/>
@@ -42,9 +70,9 @@ class Register extends Component {
                     <div className="id-form">
                         <div className="name">
                             <h2>Nom *</h2>
-                            <input type="text" className="surname-input" placeholder="Nom"/>
+                            <input type="text" className="surname-input" placeholder="Nom" required/>
                             <h2>Prénom *</h2>
-                            <input type="text" className="name-input" placeholder="Prénom"/>
+                            <input type="text" className="name-input" placeholder="Prénom" required/>
                         </div>
                         <input type="file"
                                id="avatar" name="avatar"
@@ -56,7 +84,7 @@ class Register extends Component {
                     <div className="extra-infos">
                         <div className="age">
                             <h2>Age *</h2>
-                            <input type="text" className="age-input" placeholder="Âge"/>
+                            <input type="text" className="age-input" placeholder="Âge" required/>
                         </div>
                         <div className="country">
                             <h2>Pays</h2>

@@ -186,7 +186,8 @@ input[type="radio"]:checked+label {
 .button-submit {
     border-radius: 10px;
     padding: 10px 10px;
-    font-family: "Lato Black", serif;
+    font-family: "Lato", serif;
+    font-weight: bolder;
     font-size: x-large;
     margin-top: 5vh;
 }
@@ -226,6 +227,10 @@ input[type="radio"]:checked+label {
 
     .profile-picture {
         width: 40vw;
+    }
+
+    select {
+        height: auto;
     }
 
     .alcohol-form {
