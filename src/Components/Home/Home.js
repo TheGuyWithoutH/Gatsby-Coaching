@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import ReactPlayer from 'react-player'
-import PropTypes from 'prop-types';
 import '../../styles/Home.css'
 import logo from '../../ressources/LOGO COACHING IC FOND BLANC.png'
 import scrollImg from '../../ressources/Nav.png'

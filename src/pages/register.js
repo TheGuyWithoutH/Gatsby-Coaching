@@ -1,29 +1,37 @@
 import React, {Component} from 'react';
 import '../styles/Register.css'
 import logo from "../ressources/LOGO COACHING IC FOND BLANC.png";
-import firestore from "../utils/firebase-config";
 
+const _alreadyAuth = (uuid) => {
 
-const _alreadyAuth = (uid) => {
-    const docRef = firestore.collection("temporary-uids").doc(uid);
+    const url = "https://www.theguywithouth.fr/coaching/db-query/auth-register.php?uuid=" + uuid;
+    const data = {
+        method: 'GET',
+        headers : {'Accept': 'application/json', 'Content-type': 'application/json'},
+    }
 
-    docRef.get().then((doc) => {
-        if (doc.exists) {
-            console.log(doc.data().registered)
-            if(doc.data().registered) {
-                return true;
-            } else {
-                return false;
-            }
-        } else {
-            return true;
+    fetch(url, data).then((response) => {
+        if (response.ok) {
+            return response.json();
         }
-    }).catch((error) => {
-        return true;
-    });
+    }, networkError => {
+        console.log(networkError)
+        window.location.replace("https://www.coaching.ugobalducci.fr");
+    }).then(jsonResponse => {
+        if (!jsonResponse.authorized) {
+            window.location.replace("https://www.coaching.ugobalducci.fr");
+        }
+    })
 }
 
 class Register extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            canRegister : false
+        }
+    }
 
     componentDidMount() {
         const input = document.querySelectorAll('.avatar');
@@ -41,38 +49,43 @@ class Register extends Component {
                 reader.readAsDataURL(this.files[0]);
             }
         });
+
+        const params = new URLSearchParams(document.location.search.substring(1));
+        const uid = params.get("id");
+
+        console.log("got here");
+
+        if(uid === null) {
+            console.log("no uid")
+            window.location.replace("https://www.coaching.ugobalducci.fr");
+        } else {
+            _alreadyAuth(uid);
+            this.setState({uid: uid});
+        }
     }
 
     render() {
-        /*const params = new URLSearchParams(document.location.search.substring(1));
-        const uid = params.get("id").toString();
-
-        if(uid === null) {
-            window.location.replace("/");
-        } else if (_alreadyAuth(uid)) {
-            window.location.replace("/");
-        }*/
-
         return (
             <div className="content">
                 <div className="background-element"/>
                 <div className="intro-txt">
                     <div className="title-container">
-                        <h1 className="title">Salut toi 🙃</h1>
-                        <img src={logo} className="logo"/>
+                        <h1 className="title-register">Salut toi 🙃</h1>
+                        <img src={logo} className="logo-register"/>
                     </div>
                     <p className="explanation">Avant d'accéder pour la première fois au site de ton groupe de coaching, on aimerait en apprendre
                         un peu plus sur toi. Loin de nous l'idée de te voler des informations pour les vendre 😈, elles nous serviront
-                     pour une petite présentation de qui tu est sur le site, et aussi à organiser un peu nos prochains évènements.
-                    Hormis les champs obligatoires (*), tu es libre de compléter ou non.<br/>Merci d'avance 😁</p>
+                        pour une petite présentation de qui tu est sur le site, et aussi à organiser un peu nos prochains évènements.
+                        Hormis les champs obligatoires (*), tu es libre de compléter ou non.<br/>Merci d'avance 😁</p>
                 </div>
-                <form className="form">
+                <form className="form" action="https://www.theguywithouth.fr/coaching/db-query/user-data.php" method="post">
+                    <input type="text" name="uuid" value={this.state.uid} style={{display: 'none'}}/>
                     <div className="id-form">
                         <div className="name">
                             <h2>Nom *</h2>
-                            <input type="text" className="surname-input" placeholder="Nom" required/>
+                            <input type="text" name="name" className="surname-input" placeholder="Nom" required/>
                             <h2>Prénom *</h2>
-                            <input type="text" className="name-input" placeholder="Prénom" required/>
+                            <input type="text" name="surname" className="name-input" placeholder="Prénom" required/>
                         </div>
                         <input type="file"
                                id="avatar" name="avatar"
@@ -84,20 +97,20 @@ class Register extends Component {
                     <div className="extra-infos">
                         <div className="age">
                             <h2>Age *</h2>
-                            <input type="text" className="age-input" placeholder="Âge" required/>
+                            <input type="text" name="age" className="age-input" placeholder="Âge" required/>
                         </div>
                         <div className="country">
                             <h2>Pays</h2>
-                            <input type="text" className="country-input" placeholder="Pays"/>
+                            <input type="text" name="country" className="country-input" placeholder="Pays"/>
                         </div>
                     </div>
                     <div className="bio-container">
                         <h2>Bio</h2>
-                        <textarea type="text" className="bio-input" placeholder="Décrit toi un peu..."/>
+                        <textarea type="text" name="bio" className="bio-input" placeholder="Décrit toi un peu..."/>
                     </div>
                     <div className="hobbys-container">
                         <h2>Hobbys</h2>
-                        <select name="hobbies" id="hobbies" multiple>
+                        <select name="hobbies[]" id="hobbies" multiple="MULTIPLE">
                             <option value="anime">Animes</option>
                             <option value="assos">Associations</option>
                             <option value="basket">Basketball</option>
@@ -171,7 +184,7 @@ class Register extends Component {
                     </div>
                     <div className="message-container">
                         <h2>Un petit message pour nous ?</h2>
-                        <textarea className="message-input" placeholder="Ton message" />
+                        <textarea className="message-input" name="message" placeholder="Ton message" />
                     </div>
                     <button type="submit" className="button-submit">
                         Envoyer à la CIA
