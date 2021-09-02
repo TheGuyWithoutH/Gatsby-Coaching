@@ -31,7 +31,13 @@ class Home extends PureComponent {
 
                 <div className="Group">
                     <div style={{flex: 1, display: 'flex', justifyContent: 'center'}}>
-                        <p className="txt">Salut à toi jeune coaché ! Bienvenue à l’<a href="https://www.epfl.ch/" style={{fontFamily: 'Assistant', fontWeight: 'bold', color: 'red', margin: 0, display: 'inline', textDecoration: 'none'}}>EPFL</a> ! Nous sommes ravis de t’accueillir pour ta première année dans cette merveilleuse école. Laisse-moi te parler du <p style={{fontFamily: 'Coming Soon', color: '#6E12E2', margin: 0, display: 'inline'}}>COACHING</p> : nous sommes là pour t’aider dans tes premiers pas ici, afin de rencontrer du monde, de ne pas te sentir perdu mais au contraire chez toi. Pour cela, nous allons régulièrement organiser des <p style={{fontWeight: 500, margin: 0, display: 'inline'}}>évènements</p> auquels tu es libre de participer, avec ton groupe de coaching ou bien avec la section entière.
+                        <p className="txt">Salut à toi jeune coaché ! Bienvenue à l’
+                            <a href="https://www.epfl.ch/" style={{fontFamily: 'Assistant', fontWeight: 'bold', color: 'red', margin: 0, display: 'inline', textDecoration: 'none'}}>EPFL </a>
+                            ! Nous sommes ravis de t’accueillir pour ta première année dans cette merveilleuse école. Laisse-moi te parler du
+                            <p style={{fontFamily: 'Coming Soon', color: '#6E12E2', margin: 0, display: 'inline'}}> COACHING </p>
+                            : nous sommes là pour t’aider dans tes premiers pas ici, afin de rencontrer du monde, de ne pas te sentir perdu mais au contraire chez toi. Pour cela, nous allons régulièrement organiser des
+                            <p style={{fontWeight: 500, margin: 0, display: 'inline'}}> évènements </p>
+                            auquels tu es libre de participer, avec ton groupe de coaching ou bien avec la section entière.
                             <br/>
                             <br/>
                             Nous avons hâte de te rencontrer ! En attendant, découvre ton groupe en cliquant à droite...</p>

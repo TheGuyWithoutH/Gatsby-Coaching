@@ -172,6 +172,7 @@ input[type="radio"]+label {
 }
 
 .alcohol-icon {
+    cursor: pointer;
     width: 10vmin;
     margin: auto 2vw;
 }
