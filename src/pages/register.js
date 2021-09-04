@@ -36,6 +36,8 @@ class Register extends Component {
     componentDidMount() {
         const input = document.querySelectorAll('.avatar');
 
+        const output = document.querySelectorAll('.avatar-url');
+
         const picture = input.item(0).nextElementSibling.children.item(0);
 
         input.item(0).addEventListener( 'change', function( e ) {
@@ -43,9 +45,9 @@ class Register extends Component {
                 const reader = new FileReader();
 
                 reader.onload = function (e) {
-                    picture.src = reader.result;
+                    const result = reader.result;
+                    picture.src = result;
                 }
-
                 reader.readAsDataURL(this.files[0]);
             }
         });
@@ -78,18 +80,17 @@ class Register extends Component {
                         pour une petite présentation de qui tu est sur le site, et aussi à organiser un peu nos prochains évènements.
                         Hormis les champs obligatoires (*), tu es libre de compléter ou non.<br/>Merci d'avance 😁</p>
                 </div>
-                <form className="form" action="https://www.theguywithouth.fr/coaching/db-query/user-data.php" method="post">
+                <form className="form" action="https://www.theguywithouth.fr/coaching/db-query/user-data.php" method="post" encType="multipart/form-data">
                     <input type="text" name="uuid" value={this.state.uid} style={{display: 'none'}}/>
                     <div className="id-form">
                         <div className="name">
                             <h2>Nom *</h2>
-                            <input type="text" name="name" className="surname-input" placeholder="Nom" required/>
+                            <input type="text" name="surname" className="surname-input" placeholder="Nom" required/>
                             <h2>Prénom *</h2>
-                            <input type="text" name="surname" className="name-input" placeholder="Prénom" required/>
+                            <input type="text" name="name" className="name-input" placeholder="Prénom" required/>
                         </div>
-                        <input type="file"
-                               id="avatar" name="avatar"
-                               accept="image/" className="avatar"/>
+                        <input type="text" id="avatar-url" name="avatar-url" hidden={true}/>
+                        <input type="file" id="avatar" name="avatar" accept="image/" className="avatar"/>
                         <label htmlFor="avatar">
                             <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" className="profile-picture"/>
                         </label>
