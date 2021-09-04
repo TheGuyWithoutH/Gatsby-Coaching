@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import fetch from "node-fetch";
 import '../styles/Register.css'
 import logo from "../ressources/LOGO COACHING IC FOND BLANC.png";
 

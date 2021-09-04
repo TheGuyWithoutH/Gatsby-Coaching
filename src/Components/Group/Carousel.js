@@ -1,4 +1,5 @@
 import React, { useEffect, useCallback, useState } from 'react';
+import fetch from "node-fetch";
 import '../../styles/Carousel.css'
 import Card from "./Card";
 
