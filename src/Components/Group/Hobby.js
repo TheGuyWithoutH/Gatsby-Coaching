@@ -12,7 +12,7 @@ class Hobby extends Component {
     }
 
     render() {
-        let image = "https://www.coaching.ugobalducci.fr/icons/hobbies/";
+        let image = "https://www.theguywithouth.fr/coaching/hobby-icons/";
 
         switch (this.props.hobby) {
             case 'anime':
@@ -48,7 +48,7 @@ class Hobby extends Component {
             case 'jeux':
                 image += "board-game.svg";
                 break;
-            case 'jeux-videos':
+            case 'jeux+videos':
                 image += "gamepad.svg";
                 break;
             case 'livre':

@@ -12,7 +12,7 @@ const cardItems = [
         age: '18',
         country: 'Française - Paris',
         bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet dui scelerisque, tempus dui non, blandit nulla. Etiam sed interdum est.',
-        hobbies: 'kart-cinema-foot-code'
+        hobbies: 'tv-ecriture-foot-code'
     },
     {
         uuid: 2,
@@ -22,7 +22,7 @@ const cardItems = [
         age: '19',
         country: 'Française - Toulouse',
         bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet dui scelerisque, tempus dui non, blandit nulla. Etiam sed interdum est.',
-        hobbies: 'kart-cinema-foot-code'
+        hobbies: 'tv-ecriture-foot-code'
     },
     {
         uuid: 3,
@@ -32,7 +32,7 @@ const cardItems = [
         age: '18',
         country: 'Français - Strasbourg',
         bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet dui scelerisque, tempus dui non, blandit nulla. Etiam sed interdum est.',
-        hobbies: 'kart-cinema-foot-code'
+        hobbies: 'tv-ecriture-foot-code'
     },
     {
         uuid: 4,
@@ -42,7 +42,7 @@ const cardItems = [
         age: '22',
         country: 'Suisse - Bern',
         bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet dui scelerisque, tempus dui non, blandit nulla. Etiam sed interdum est.',
-        hobbies: 'kart-cinema-foot-code'
+        hobbies: 'tv-ecriture-foot-code'
     },
 ];
 

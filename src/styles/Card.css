@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
 
 .card-container {
-    background-image: linear-gradient(rgba(221,221,221,0.7) 0%, rgba(221,221,221,0.7) 100%), url('../ressources/LOGO COACHING IC FOND BLANC.png');
+    background-image: linear-gradient(rgba(221,221,221,0.8) 0%, rgba(221,221,221,0.8) 100%), url('../ressources/LOGO COACHING IC FOND BLANC.png');
     background-size: cover;
     background-position: center;
     backdrop-filter: blur(60px);
@@ -16,6 +16,9 @@
 .profile-img {
     border-radius: 50000px;
     width: 40%;
+    -webkit-box-shadow: 9px 11px 18px 0px rgba(0,0,0,0.23);
+    -moz-box-shadow: 9px 11px 18px 0px rgba(0,0,0,0.23);
+    box-shadow: 9px 11px 18px 0px rgba(0,0,0,0.23);
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
@@ -70,10 +73,12 @@
 
 .icon {
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .icon-img {
-    width: 80%;
+    width: 60%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
