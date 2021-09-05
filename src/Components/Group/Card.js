@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../../styles/Card.css'
+import Hobby from "./Hobby";
 
 const defaultBio = "Coucou ! Je n'ai pas fait de bio mais j'ai hâte de te rencontrer";
 
@@ -16,13 +17,12 @@ class Card extends Component {
     _areThereHobbies = (settings) => {
         if(settings.hobbies){
             const hobbiesArray = settings.hobbies.split('-')
-            return hobbiesArray.slice(0, 4).map((item) => (<img src={item}/>))
+            return hobbiesArray.slice(0, 4).map((item) => (<Hobby hobby={item}/>))
         }
     }
 
     render() {
         const settings = this.props.settings;
-        console.log(settings.picture)
         return (
             <div className="card-container">
                 <img src={settings.picture || settings.imgUrl || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} className="profile-img"/>

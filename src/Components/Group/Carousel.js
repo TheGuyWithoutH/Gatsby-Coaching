@@ -74,16 +74,18 @@ export const Carousel = () => {
     });
 
     const handleDataFetch = () => {
-        fetch("https://www.theguywithouth.fr/coaching/db-query/user-data.php")
-            .then(response => response.json())
-            .then(data => {
-                /*console.log(data)*/
-                if(data.length < 3) data = data.concat(cardItems)
-                setLoaded({
-                    isLoaded: true,
-                    data: data
+        if(!loaded.isLoaded){
+            fetch("https://www.theguywithouth.fr/coaching/db-query/user-data.php")
+                .then(response => response.json())
+                .then(data => {
+                    /*console.log(data)*/
+                    if(data.length < 3) data = data.concat(cardItems)
+                    setLoaded({
+                        isLoaded: true,
+                        data: data
+                    })
                 })
-            })
+        }
     }
 
     const handleCardTransitionRight = useCallback(() => {

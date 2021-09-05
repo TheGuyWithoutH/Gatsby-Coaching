@@ -123,8 +123,8 @@ class Register extends Component {
                             <option value="danse">Danse</option>
                             <option value="ecriture">Ecriture</option>
                             <option value="foot">Football</option>
-                            <option value="jeux">Jeux de Rôle</option>
-                            <option value="jeux">Jeux Vidéos</option>
+                            <option value="jeux">Jeux de Rôle/de Société</option>
+                            <option value="jeux-videos">Jeux Vidéos</option>
                             <option value="livre">Livres</option>
                             <option value="maths">Maths</option>
                             <option value="mode">Mode</option>
