@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap');
+
+.content-timeline {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-timeline {
+    color: black;
+    text-align: center;
+    font-weight: bolder;
+    font-family: "Lato", serif;
+    font-size: 9vw;
+}

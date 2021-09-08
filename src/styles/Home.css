@@ -9,11 +9,39 @@ html {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
+.parallax {
+    perspective: 300px;
+    height: 150vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.parallax__group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    scroll-snap-type: y mandatory;
+}
+
+.header-group {
+    height: 200vh;
+}
 
 .Headers {
-    background-image: linear-gradient(rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0.3) 100%), url("../ressources/EPFL-vue-aerienne-1536x864.jpg");
     text-align: center;
     background-size: cover;
 
@@ -21,7 +49,13 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform: translateZ(0);
 
+}
+
+.bg-image {
+    background-image: linear-gradient(rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0.3) 100%), url("../ressources/EPFL-vue-aerienne-1536x864.jpg");
+    transform: translateZ(-300px) scale(3);
 }
 
 .logo {
@@ -110,6 +144,7 @@ html {
 }
 
 .Group {
+    z-index: 1;
     min-height: 100vh;
     min-width: 100%;
     display: flex;
@@ -117,6 +152,11 @@ html {
     align-items: center;
     justify-content: center;
     scroll-snap-align: start;
+    /*border-top-width: 3vh;*/
+    /*border-style: solid;*/
+    /*border-image: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.44) 70%, rgb(255, 255, 255) 100%);*/
+    /*border-image-slice: 1;*/
+    background: white;
 }
 
 
@@ -133,8 +173,8 @@ html {
     height: 80vh;
     width: 40vw;
     padding-top: 2vh;
-    background: white;
-    border-radius: 20vmin;
+    background: #fafbfc;
+    border-radius: 10vmin;
     -webkit-box-shadow: 12px 9px 10px -6px rgba(0,0,0,0.51);
     box-shadow: 12px 9px 10px -6px rgba(0,0,0,0.51);
     display: flex;
@@ -171,6 +211,7 @@ html {
     align-items: center;
     justify-content: center;
     scroll-snap-align: start;
+    background: white;
 }
 
 
