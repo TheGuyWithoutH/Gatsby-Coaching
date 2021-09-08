@@ -216,7 +216,7 @@ html {
 @media screen and (orientation:portrait) {
 
     .bg-image {
-        transform: translateX(-150px) translateZ(-300px) scale(3);
+        transform: translateX(-500px) translateZ(-300px) scale(3);
     }
 
     .logo {
