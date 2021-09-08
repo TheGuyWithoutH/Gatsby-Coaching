@@ -215,6 +215,10 @@ html {
 /* Création visuelle en mode portrait */
 @media screen and (orientation:portrait) {
 
+    .bg-image {
+        transform: translateX(-20px) translateZ(-300px) scale(3);
+    }
+
     .logo {
         width: 80vw;
     }
@@ -252,4 +256,5 @@ html {
         width: 70%;
         margin: 0;
     }
+
 }
