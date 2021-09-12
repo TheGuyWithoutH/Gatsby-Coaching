@@ -78,7 +78,6 @@ export const Carousel = () => {
             fetch("https://www.theguywithouth.fr/coaching/db-query/user-data.php")
                 .then(response => response.json())
                 .then(data => {
-                    /*console.log(data)*/
                     if(data.length < 3) data = data.concat(cardItems)
                     setLoaded({
                         isLoaded: true,
@@ -91,9 +90,9 @@ export const Carousel = () => {
     const handleCardTransitionRight = useCallback(() => {
         // If we've reached the end, start again from the first card,
         // but carry previous value over
-        if (indexes.currentIndex >= cardItems.length - 1) {
+        if (indexes.currentIndex >= loaded.data.length - 1) {
             setIndexes({
-                previousIndex: cardItems.length - 1,
+                previousIndex: loaded.data.length - 1,
                 currentIndex: 0,
                 nextIndex: 1,
             });
@@ -101,30 +100,30 @@ export const Carousel = () => {
             setIndexes((prevState) => ({
                 previousIndex: prevState.currentIndex,
                 currentIndex: prevState.currentIndex + 1,
-                nextIndex: prevState.currentIndex + 2 === cardItems.length ? 0 : prevState.currentIndex + 2,
+                nextIndex: prevState.currentIndex + 2 === loaded.data.length ? 0 : prevState.currentIndex + 2,
             }));
         }
         console.log(indexes.currentIndex)
-    }, [indexes.currentIndex]);
+    }, [indexes.currentIndex, loaded.data]);
 
     const handleCardTransitionLeft = useCallback(() => {
         // If we've reached the end, start again from the first card,
         // but carry previous value over
         if (indexes.currentIndex <= 0) {
             setIndexes({
-                previousIndex: cardItems.length - 2,
-                currentIndex: cardItems.length - 1,
+                previousIndex: loaded.data.length - 2,
+                currentIndex: loaded.data.length - 1,
                 nextIndex: 0,
             });
         } else {
             setIndexes((prevState) => ({
-                previousIndex: prevState.currentIndex - 2 < 0 ? cardItems.length - 1 : prevState.currentIndex - 2,
+                previousIndex: prevState.currentIndex - 2 < 0 ? loaded.data.length - 1 : prevState.currentIndex - 2,
                 currentIndex: prevState.currentIndex - 1,
                 nextIndex: prevState.currentIndex,
             }));
         }
         console.log(indexes.currentIndex)
-    }, [indexes.currentIndex]);
+    }, [indexes.currentIndex, loaded.data]);
 
 
     //Component life

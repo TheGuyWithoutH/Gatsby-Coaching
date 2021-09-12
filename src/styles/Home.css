@@ -230,6 +230,7 @@ html {
 
 .eventLogo {
     width: 80%;
+    transform: translateZ(100px) translateX(100px) scale(0.7);
 }
 
 .lastEvent {
@@ -290,6 +291,10 @@ html {
 
     .eventIllustration {
         width: 100%;
+    }
+
+    .eventLogo {
+        transform: translateZ(0px) translateX(0px) scale(1);
     }
 
 }
