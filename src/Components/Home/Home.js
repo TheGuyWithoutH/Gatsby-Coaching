@@ -3,8 +3,10 @@ import ReactPlayer from 'react-player'
 import '../../styles/Home.css'
 import logo from '../../ressources/LOGO COACHING IC FOND BLANC.png'
 import scrollImg from '../../ressources/Nav.png'
-import group from '../../ressources/GroupeLogo.png'
+import group from '../../ressources/Team spirit-pana.svg'
+import eventLogo from '../../ressources/Calendar-amico.svg'
 import {Link} from "gatsby";
+import EventCard from "../Events/EventCard";
 
 class Home extends PureComponent {
     render() {
@@ -48,7 +50,7 @@ class Home extends PureComponent {
                             <div style={{flex: 1, display: 'flex', justifyContent: 'center'}}>
                                 <Link to='/group' style={{textDecoration: 'none'}}>
                                     <div className="button">
-                                        <div style={{flex: 3, display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 0}}>
+                                        <div style={{flex: 3, display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 0, width: '100%'}}>
                                             <img src={group} className="groupIco"/>
                                         </div>
                                         <p className="groupTxt">Découvre<br/>Ton Groupe</p>
@@ -59,7 +61,14 @@ class Home extends PureComponent {
                     </div>
                     <div className="parallax__group">
                         <div className="Timeline">
-                            <h1 style={{fontFamily: "Quicksand", fontSize: '17vmin'}}>Work in progress...</h1>
+                            <div className="eventIllustration">
+                                <img src={eventLogo} className="eventLogo"/>
+                            </div>
+                            <div className="lastEvent">
+                                <h1 className="eventText">Prochain évènement</h1>
+                                <EventCard date="17 SEP" image="https://coaching.epfl.ch/wp-content/uploads/2019/11/71701891_2829026670458618_6957538950105792512_o.jpg"/>
+                                <a href="/timeline" style={{fontFamily: "Lato", fontSize: '4vmin', fontWeight: 'lighter', textDecoration: 'none', color:'#8338EC'}}>/> Voir tous les évènements</a>
+                            </div>
                         </div>
                     </div>
                 </div>

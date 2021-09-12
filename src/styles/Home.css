@@ -178,6 +178,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform: translateZ(100px) translateX(-100px) scale(0.7);
 }
 
 .button:hover {
@@ -186,7 +187,7 @@ html {
 }
 
 .groupIco {
-    width: 80%;
+    width: 60%;
     margin: 0;
 }
 
@@ -196,7 +197,7 @@ html {
     font-size: 6vw;
     text-align: center;
     vertical-align: center;
-    color: #49CCCC;
+    color: #00CECB;
     margin: 0;
 }
 
@@ -211,13 +212,38 @@ html {
     background: white;
 }
 
+.eventText {
+    font-family: "Quicksand", sans-serif;
+    font-size: 15vmin;
+    color:#8338EC;
+    margin-top: 2vh;
+    line-height: 12vmin;
+}
+
+.eventIllustration {
+    flex : 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.eventLogo {
+    width: 80%;
+}
+
+.lastEvent {
+    flex : 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
 
 /* Création visuelle en mode portrait */
 @media screen and (orientation:portrait) {
-
-    .bg-image {
-        transform: translateX(-500px) translateZ(-300px) scale(3);
-    }
 
     .logo {
         width: 80vw;
@@ -240,6 +266,7 @@ html {
     .button {
         height: 80vw;
         width: 80vw;
+        transform: translateZ(0px) translateX(0px) scale(1);
     }
 
     .button:hover {
@@ -255,6 +282,14 @@ html {
     .groupIco {
         width: 70%;
         margin: 0;
+    }
+
+    .Timeline {
+        flex-direction: column-reverse;
+    }
+
+    .eventIllustration {
+        width: 100%;
     }
 
 }
