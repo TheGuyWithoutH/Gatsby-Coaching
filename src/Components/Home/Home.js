@@ -65,9 +65,9 @@ class Home extends PureComponent {
                                 <img src={eventLogo} className="eventLogo"/>
                             </div>
                             <div className="lastEvent">
-                                <h1 className="eventText">Prochain évènement</h1>
+                                <h1 className="eventText">Prochain Evénement</h1>
                                 <EventCard date="17 SEP" image="https://coaching.epfl.ch/wp-content/uploads/2019/11/71701891_2829026670458618_6957538950105792512_o.jpg"/>
-                                <a href="/timeline" style={{fontFamily: "Lato", fontSize: '4vmin', fontWeight: 'lighter', textDecoration: 'none', color:'#8338EC'}}>/> Voir tous les évènements</a>
+                                <a href="/timeline" style={{fontFamily: "Lato", fontSize: '4vmin', fontWeight: 'lighter', textDecoration: 'none', color:'#8338EC'}}>/> Voir tous les évènements   👈</a>
                             </div>
                         </div>
                     </div>

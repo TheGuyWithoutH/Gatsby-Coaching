@@ -217,6 +217,7 @@ html {
     font-size: 15vmin;
     color:#8338EC;
     margin-top: 2vh;
+    margin-bottom: 0;
     line-height: 12vmin;
 }
 
@@ -287,6 +288,14 @@ html {
 
     .Timeline {
         flex-direction: column-reverse;
+    }
+
+    .lastEvent {
+        justify-content: space-evenly;
+    }
+
+    .eventText {
+        text-align: center;
     }
 
     .eventIllustration {
