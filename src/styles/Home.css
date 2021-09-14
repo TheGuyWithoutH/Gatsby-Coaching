@@ -262,6 +262,7 @@ html {
 
     .Video {
         min-height: 50vh;
+        justify-content: start;
     }
 
     .Group {
