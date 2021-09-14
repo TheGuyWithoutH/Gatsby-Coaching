@@ -125,10 +125,10 @@ class Register extends Component {
                         </div>
                         <div className="bio-container">
                             <h2>Bio</h2>
-                            <textarea type="text" name="bio" className="bio-input" placeholder="Décrit toi un peu..."/>
+                            <textarea type="text" name="bio" maxLength="300" className="bio-input" placeholder="Décrit toi un peu..."/>
                         </div>
                         <div className="hobbys-container">
-                            <h2>Hobbys</h2>
+                            <h2>Hobbys (4 max)</h2>
                             <select name="hobbies[]" id="hobbies" multiple="MULTIPLE">
                                 <option value="anime">Animes</option>
                                 <option value="assos">Associations</option>

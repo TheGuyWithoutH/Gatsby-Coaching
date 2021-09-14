@@ -7,7 +7,8 @@ class Timeline extends Component {
         return (
             <div className="content-timeline">
                 <h1 className="title-timeline">Evènements Coaching</h1>
-                <TimelineElement/>
+                <p style={{fontSize: '5vmin', textAlign: 'center', fontFamily: 'Lato', fontWeight: 'bolder', color: '#8338EC'}}>Work in
+                    Progress...</p>
             </div>
         );
     }
