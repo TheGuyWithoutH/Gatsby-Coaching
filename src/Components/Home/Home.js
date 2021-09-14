@@ -25,11 +25,14 @@ class Home extends PureComponent {
                             </div>
                             <a name="video"/>
                             <div className="Video">
-                                <ReactPlayer
-                                    url="https://youtu.be/Lv66S5FoAZ8"
-                                    width="75vw"
-                                    height="75vh"
-                                />
+                                <div className="player">
+                                    <ReactPlayer
+                                        url="https://youtu.be/Lv66S5FoAZ8"
+                                        width="100%"
+                                        height="100%"
+                                    />
+                                </div>
+
                             </div>
                         </div>
                     </div>
