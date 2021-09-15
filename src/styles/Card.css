@@ -58,6 +58,7 @@
 .origin, .description-content {
     font-family: "Sen", SansSerif, serif;
     font-size: initial;
+    text-align: justify;
 }
 
 .origin {
