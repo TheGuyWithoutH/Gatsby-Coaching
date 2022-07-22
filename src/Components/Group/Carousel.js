@@ -84,6 +84,12 @@ export const Carousel = () => {
                         data: data
                     })
                 })
+                .catch(err => {
+                    setLoaded({
+                        isLoaded: true,
+                        data: cardItems
+                    })
+                })
         }
     }
 
